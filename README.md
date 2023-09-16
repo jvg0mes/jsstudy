@@ -2,7 +2,7 @@ This repository it's a review of my studies using the content of the [jschalleng
 
 ## Summary
 - [Variables](1_variables.js)
-- [Operators (under development)](2_operators.js)
+- [Data Types (under development)](2_datatypes.js)
 
 ## Searching sources
 - [jschallenger](https://www.jschallenger.com/)
