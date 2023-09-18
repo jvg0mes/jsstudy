@@ -22,7 +22,27 @@ let car1 = 'ferrari' + 21 + 4 // will produce ferrari214 because the first one i
 let car2 = 21 + 4 + 'ferrari' // will produce 25ferrari because the first one is numeric and only the last is string
 let car3 = 21 + 4 + 'ferrari' + 5 + 4 // will produce 25ferrari54 because ferrari appears on middle
 console.log(car3)
-// ** NEED TO ADD STRING SEARCH AND STRING TEMPLATE **
+// from here explains the string search methods
+let phrase1 = 'I washed my car yesterday'
+console.log('washed is at the position:' + phrase1.indexOf('washed')) // return the start position of the first string
+console.log('the last time which letter y appears is: ' + phrase1.lastIndexOf('y'))
+console.log('the first result of search y in phrase1 is: ' + phrase1.search('y'))
+// the difference between indexOf and search is that indexOf accepts the second parameter which allows to select the 
+// start of string and search allows regex at the first parameter but don't have a second parameter
+// see the uses of regex below with matches
+console.log('the first match of the string car in phrase1 is: ' + phrase1.match('y'))
+console.log('all matches of y at the string phrase1: ')
+for (let match of phrase1.matchAll('y')) console.log('\t' + match['index'])
+// to use regex you must set g flag and for case-sensitive you must use i
+console.log('Searching any word car occurence at phrase1: ')
+for (let cmatch of phrase1.matchAll(/cAR/gi)) console.log(cmatch)
+// the last string methods is include which checks if string is a piece of another string and startsWith and endsWith 
+// what your names are suggestive enough to know what these functions do
+console.log('Checking if phrase1 contains the string car: ' + phrase1.includes('car'))
+console.log('Checking if phrase1 starts with the string car: ' + phrase1.startsWith('car'))
+console.log('Checking if phrase1 ends with the string yesterday: ' + phrase1.endsWith('yesterday'))
+// from here explains the string templates methods
+
 
 // Booleans
 let x = true;
